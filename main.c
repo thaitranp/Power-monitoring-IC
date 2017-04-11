@@ -157,7 +157,6 @@ void _ISR_PSV _U1RXInterrupt(void)
 
 int main(void) {
     ANSA = 0x000;
-    int i;
     lcd_init();
     INTCON2bits.GIE = 1;
     UART_init();
