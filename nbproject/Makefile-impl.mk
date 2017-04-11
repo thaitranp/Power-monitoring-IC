@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Power_mon.X
+PROJECTNAME=Power-monitoring-PIC24f
 
 # Active Configuration
 DEFAULTCONF=default
