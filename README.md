@@ -1,2 +1,2 @@
 # Power-monitoring-IC
-# Power-monitoring-IC
+working code for the internal osc
