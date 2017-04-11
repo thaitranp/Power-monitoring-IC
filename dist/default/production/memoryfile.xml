@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/default/production/Power_mon.X.production.elf">
+  <executable name="dist/default/production/Power-monitoring-PIC24f.production.elf">
     <memory name="data">
       <units>bytes</units>
       <length>16384</length>
@@ -11,8 +11,8 @@
     <memory name="program">
       <units>bytes</units>
       <length>263424</length>
-      <used>1137</used>
-      <free>262287</free>
+      <used>999</used>
+      <free>262425</free>
     </memory>
   </executable>
 </project>
