@@ -32,36 +32,42 @@ int length;
 char rcbuf[STRLEN];
 
 void UART_init(void)
-{
-TRISBbits.TRISB15 = 0x001;
-ANSBbits.ANSB15 = 0x000;
-TRISBbits.TRISB14= 0x000;
-ANSBbits.ANSB14 = 0x000;
+{   
+ANSBbits.ANSB15 = 0x0000;
+TRISBbits.TRISB15 = 0x0001;
+ANSBbits.ANSB14 = 0x0000;
+TRISBbits.TRISB14 = 0x0000;
+ANSAbits.ANSA0= 0x0000;
+TRISAbits.TRISA0 = 0x0001;
+ANSAbits.ANSA1 = 0x0000;
+TRISAbits.TRISA1 = 0x0000;
 __builtin_write_OSCCONL(OSCCON & 0xbf);
-// Assign U1RX To Pin RP15
-RPINR18bits.U1RXR = 0x0F;
-//Assign U1TX to Pin RP14
-RPOR7bits.RP14R = 0x03;
+// Assign U1RX To Pin RP0
+RPINR18bits.U1RXR = 15;
+RPOR7bits.RP14R = 3;
+RPINR18bits.U1CTSR = 26 ;
+RPOR13bits.RP27R = 4;
 __builtin_write_OSCCONL(OSCCON | 0x40);
 //data, parity and stop bit
 U1MODEbits.BRGH = 0;
 U1MODEbits.PDSEL = 00;
 U1MODEbits.STSEL = 0;
 //set baud rate
-U1BRG = 103;
+U1BRG = 25  ;
 //interrupt config
-U1STAbits.URXISEL = 00;
+U1STAbits.URXISEL = 01;
 U1STAbits.UTXINV = 0;
 //UART interrupt enable
 IEC0bits.U1RXIE = 1; // interrupt on reception allowed
-IEC0bits.U1TXIE = 0; // no interrupt on transmition
-IEC4bits.U1ERIE = 1; // interrupts on errors allowed
-IPC2bits.U1RXIP = 7; // interrupt level of reception
-IPC16bits.U1ERIP = 6; // interrupt level on errors
+IEC0bits.U1TXIE = 0; // no interrupt on transmission
+
 //enable UART
 U1MODEbits.UARTEN = 1;
-U1STAbits.UTXEN = 1;
-U1STAbits.URXEN = 1;
+U1MODEbits.UEN1 = 1;
+U1MODEbits.UEN0 = 0;
+U1MODEbits.RTSMD = 0;
+U1STAbits.UTXEN = 1;    
+U1STAbits.URXEN = 1; 
 
 }
 
@@ -159,9 +165,6 @@ int main(void) {
     {
     UART_puts("abcd");
     lcd_command(0x02);
-    for(i=0;i<=length; i++){
-        lcd_write_char(rcbuf[i]);
-    }
     }
 
     return 0;
