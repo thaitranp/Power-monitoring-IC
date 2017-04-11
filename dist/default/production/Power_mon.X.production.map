@@ -66,11 +66,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0x10a           0x18f  (399)
 .const                       0x20a                 0x8             0xc  (12)
-.text                        0x212               0x1c2           0x2a3  (675)
-.init.delay32                0x3d4                0x1c            0x2a  (42)
-.dinit                       0x3f0                 0xe            0x15  (21)
+.text                        0x212               0x1ba           0x297  (663)
+.init.delay32                0x3cc                0x1c            0x2a  (42)
+.dinit                       0x3e8                 0xe            0x15  (21)
 
-                 Total program memory used (bytes):          0x47d  (1149) <1%
+                 Total program memory used (bytes):          0x471  (1137) <1%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0xfc]
@@ -120,31 +120,31 @@ External Symbols in Program Memory (by address):
                   0x000152                  __data_init
                   0x000204                  __DefaultInterrupt
                   0x000212                  _UART_init
-                  0x000292                  _UART_putc
-                  0x0002b0                  _UART_puts
-                  0x0002ca                  _lcd_command
-                  0x0002ea                  _lcd_write_char
-                  0x00030a                  _lcd_init
-                  0x000334                  __U1RXInterrupt
-                  0x0003a8                  _main
-                  0x0003d4                  ___delay32
+                  0x0002a2                  _UART_putc
+                  0x0002c0                  _UART_puts
+                  0x0002da                  _lcd_command
+                  0x0002fa                  _lcd_write_char
+                  0x00031a                  _lcd_init
+                  0x000344                  __U1RXInterrupt
+                  0x0003b8                  _main
+                  0x0003cc                  ___delay32
 
 External Symbols in Program Memory (by name):
 
                   0x000212                  _UART_init
-                  0x000292                  _UART_putc
-                  0x0002b0                  _UART_puts
+                  0x0002a2                  _UART_putc
+                  0x0002c0                  _UART_puts
                   0x000204                  __DefaultInterrupt
-                  0x000334                  __U1RXInterrupt
-                  0x0003d4                  ___delay32
+                  0x000344                  __U1RXInterrupt
+                  0x0003cc                  ___delay32
                   0x000152                  __data_init
                   0x000152                  __data_init_da
                   0x00013c                  __psv_init
                   0x000100                  __resetPRI
-                  0x0002ca                  _lcd_command
-                  0x00030a                  _lcd_init
-                  0x0002ea                  _lcd_write_char
-                  0x0003a8                  _main
+                  0x0002da                  _lcd_command
+                  0x00031a                  _lcd_init
+                  0x0002fa                  _lcd_write_char
+                  0x0003b8                  _main
 
 Memory Configuration
 
@@ -248,26 +248,26 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x1640
+.debug_info       0x000000       0x12df
  *(.debug_info)
- .debug_info      0x000000       0x1640 build/default/production/main.o
+ .debug_info      0x000000       0x12df build/default/production/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x18e
+.debug_abbrev     0x000000        0x19b
  *(.debug_abbrev)
- .debug_abbrev    0x000000        0x18e build/default/production/main.o
+ .debug_abbrev    0x000000        0x19b build/default/production/main.o
 
-.debug_line       0x000000         0xf2
+.debug_line       0x000000         0xf5
  *(.debug_line)
- .debug_line      0x000000         0xf2 build/default/production/main.o
+ .debug_line      0x000000         0xf5 build/default/production/main.o
 
 .debug_frame      0x000000        0x11c
  *(.debug_frame)
  .debug_frame     0x000000        0x11c build/default/production/main.o
 
-.debug_str        0x000000         0x94
+.debug_str        0x000000         0x8c
  *(.debug_str)
- .debug_str       0x000000         0x94 build/default/production/main.o
+ .debug_str       0x000000         0x8c build/default/production/main.o
 
 .debug_loc
  *(.debug_loc)
@@ -1614,20 +1614,20 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000018        0x1df
+                  0x000018        0x1c4
  .debug_pubtypes
-                  0x000018        0x1df build/default/production/main.o
+                  0x000018        0x1c4 build/default/production/main.o
 
 __c30_signature
-                  0x0001f7         0x18
+                  0x0001dc         0x18
  __c30_signature
-                  0x0001f7          0x6 build/default/production/main.o
+                  0x0001dc          0x6 build/default/production/main.o
  __c30_signature
-                  0x0001fd          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt0_extended24.o)
+                  0x0001e2          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt0_extended24.o)
  __c30_signature
-                  0x000203          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(data_init_24.o)
+                  0x0001e8          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(data_init_24.o)
  __c30_signature
-                  0x000209          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(delay32da.Leo)
+                  0x0001ee          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(delay32da.Leo)
 
 .nbss               0x0800          0x4
  .nbss              0x0800          0x4 build/default/production/main.o
@@ -1637,6 +1637,10 @@ __c30_signature
 .bss                0x0804          0xc
  .bss               0x0804          0xc build/default/production/main.o
                     0x0804                  _rcbuf
+
+.config_JTAGEN    0x02af28          0x2
+ .config_JTAGEN
+                  0x02af28          0x2 build/default/production/main.o
 
 .config_WDTCLK    0x02af20          0x2
  .config_WDTCLK
@@ -1656,20 +1660,20 @@ __c30_signature
 .const              0x820a          0x8 load address 0x00020a  
  .const             0x820a          0x8 build/default/production/main.o
 
-.text             0x000212        0x1c2
- .text            0x000212        0x1c2 build/default/production/main.o
+.text             0x000212        0x1ba
+ .text            0x000212        0x1ba build/default/production/main.o
                   0x000212                  _UART_init
-                  0x000292                  _UART_putc
-                  0x0002b0                  _UART_puts
-                  0x0002ca                  _lcd_command
-                  0x0002ea                  _lcd_write_char
-                  0x00030a                  _lcd_init
-                  0x000334                  __U1RXInterrupt
-                  0x0003a8                  _main
+                  0x0002a2                  _UART_putc
+                  0x0002c0                  _UART_puts
+                  0x0002da                  _lcd_command
+                  0x0002fa                  _lcd_write_char
+                  0x00031a                  _lcd_init
+                  0x000344                  __U1RXInterrupt
+                  0x0003b8                  _main
 
-.init.delay32     0x0003d4         0x1c
- .init.delay32    0x0003d4         0x1c c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(delay32da.Leo)
-                  0x0003d4                  ___delay32
+.init.delay32     0x0003cc         0x1c
+ .init.delay32    0x0003cc         0x1c c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(delay32da.Leo)
+                  0x0003cc                  ___delay32
 
-.dinit            0x0003f0          0xe
- .dinit           0x0003f0          0xe data_init
+.dinit            0x0003e8          0xe
+ .dinit           0x0003e8          0xe data_init
