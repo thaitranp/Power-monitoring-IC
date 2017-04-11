@@ -24,6 +24,7 @@
 
 #pragma config FWDTEN = OFF
 #pragma config WINDIS = OFF             // Watchdog Timer Window Enable bit (Watchdog Timer in Non-Window mode)
+#pragma config JTAGEN = OFF
 
 #define STRLEN 12
 #define _ISR_PSV __attribute__((__interrupt__, __auto_psv__))
